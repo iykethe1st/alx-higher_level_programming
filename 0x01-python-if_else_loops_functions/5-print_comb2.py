@@ -4,7 +4,6 @@ for num in range(0, 100):
         print("{}".format(num))
     elif num < 99:
         if num < 10:
-            print("0{}".format(num), end=", ")
-        else:
-            print("{}".format(num), end=", ")
+            num = "0" + str(num)
+        print("{}".format(num), end=", ")
     
