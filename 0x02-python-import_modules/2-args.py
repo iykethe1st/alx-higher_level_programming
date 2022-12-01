@@ -3,7 +3,7 @@ if __name__ == "__main__":
     import sys
     total_arg = len(sys.argv)
     if total_arg <= 1:
-        print("0 arguments")
+        print("0 arguments.")
     else:
         if total_arg == 2:
             print("{} argument:".format(total_arg - 1))
