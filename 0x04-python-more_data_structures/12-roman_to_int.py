@@ -23,17 +23,16 @@ def roman_to_int(roman_string):
 
     if not (isinstance(roman_string, str)) or roman_string == None:
         return 0
- 
+
     while (i < len(roman_string)):
         num1 = get_value(roman_string[i])
-        
+
         if (i + 1 < len(roman_string)):
             num2 = get_value(roman_string[i + 1])
-        
+
             if (num1 >= num2):
-                sum += num1
                 i += 1
-        
+
             else:
                 sum += num2 - num1
                 i += 2
