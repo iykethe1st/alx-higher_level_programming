@@ -1,0 +1,50 @@
+The "Add Integer" module
+========================
+
+using "add_integer"
+------------------
+
+This is an example text file in reStructuredText format. First import
+"add_integer" from the "0-add_integer" module:
+
+----------------------
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+# a = 1, b = 2
+>>> add_integer(1, 2)
+3
+
+# a = -1, b = 2
+>>> add_integer(-1, 2)
+1
+
+# a = float, b = int
+>>> add_integer(1.2, 1)
+2.2
+
+# a = int, b = float
+>>> add_integer(1, 1.3)
+2.3
+
+# a = float, b = float
+>>> add_integer(1.2, 1.2)
+2.4
+
+# a = None, b = int
+>>> add_integer(None, 2)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+# a = int, b = None
+>>> add_integer(1, None)
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+# a = str, b = str
+>>> add_integer("me", "you")
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
